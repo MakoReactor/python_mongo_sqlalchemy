@@ -1,1 +1,2 @@
-# python_mongo_sqlalchemy
+# Projeto prático 
+## Integrando Python com Sqlite usando SqlAlchemy e Integrando Python com MongoDB
