@@ -1,11 +1,10 @@
 # Python e MongoDB
-import pymongo as pym
+
+from connection_mongodb import connection
 from pprint import pprint
 
-# Criar coneção com MongoDB
-client_mongo = pym.MongoClient(
-    "mongodb+srv://douglasmakubex:QViKGDeHAnWmQxs9@cluster0.f7bjkqo.mongodb.net/?retryWrites=true&w=majority"
-)
+
+client_mongo = connection()
 
 db = client_mongo.banco
 collection = db.banco_collection
@@ -98,6 +97,5 @@ for nome in db.clientes.find({"name": "sandy"}):
     pprint(nome)
     print()
 
-
-# apaga a collection para poder sempre começar zerado
+    # apaga a collection para poder sempre começar zerado
 db.drop_collection("clientes")
